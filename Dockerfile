@@ -16,3 +16,5 @@ RUN cd /data && npm install
 ADD . /data/
 
 CMD node /data/server.js
+
+EXPOSE 3000
