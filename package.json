@@ -4,7 +4,7 @@
   "description": "Dockerfile to build the prerender container image",
   "main": "server.js",
   "dependencies": {
-    "prerender": "^3.14.1",
+    "prerender": "izeni-team/prerender",
     "prerender-redis-cache": "^0.1.6"
   },
   "devDependencies": {},
@@ -23,3 +23,12 @@
   },
   "homepage": "https://github.com/cerisier/docker-prerender"
 }
+
+
+
+
+
+
+
+
+
