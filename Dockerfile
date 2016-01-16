@@ -9,14 +9,17 @@ RUN apt-get update -y && apt-get install -y \
     libfreetype6 libfontconfig \
     build-essential g++ flex bison gperf ruby perl \
     libsqlite3-dev libfontconfig1-dev libicu-dev libfreetype6 libssl-dev \
-    libpng-dev libjpeg-dev python libx11-dev libxext-dev
+    libpng-dev libjpeg-dev python libx11-dev libxext-dev \
+    ca-certificates
 
 RUN mkdir /src && \
     cd /src && \
     git clone --recurse-submodules git://github.com/ariya/phantomjs.git && \
     cd phantomjs && \
     ./build.py && \
-    install -m 755 -o root -g root -t /usr/local/bin bin/phantomjs
+    install -m 755 -o root -g root -t /usr/local/bin bin/phantomjs && \
+    cd / && \
+    rm -rf /src/phantomjs
 
 RUN mkdir /data
 
