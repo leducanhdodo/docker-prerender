@@ -5,6 +5,7 @@ var server = prerender({
     workers: process.env.PHANTOM_CLUSTER_NUM_WORKERS,
     iterations: process.env.PHANTOM_WORKER_ITERATIONS || 10,
     phantomBasePort: process.env.PHANTOM_CLUSTER_BASE_PORT || 12300,
+    waitAfterLastRequest: process.env.PHANTOM_WAIT_AFTER_LAST_REQUEST || 1000,
     messageTimeout: process.env.PHANTOM_CLUSTER_MESSAGE_TIMEOUT
 });
 
